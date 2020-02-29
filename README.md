@@ -7,14 +7,13 @@ Serverless Framework を使った AWS Lambda に関数を作成するサンプ�
 以下の言語を想定しています。
 
 - aws-python3
--
 
 ## aws-python3
 
 Create function with python3 template.
 
 ```powershell
-PS> serverless create --template aws-python3 --path aws-python3 --name hello-serverless
+PS> serverless create --template aws-python3 --path aws-python3 --name serverless-python
 ```
 
 Change `serverless.yml`.
