@@ -1,5 +1,7 @@
 service: serverless-go
 frameworkVersion: ">=1.28.0 <2.0.0"
+app: hands-on
+org: krymtkts
 
 provider:
   name: aws
