@@ -1,4 +1,6 @@
 service: serverless-python
+app: hands-on
+org: krymtkts
 
 provider:
   name: aws
