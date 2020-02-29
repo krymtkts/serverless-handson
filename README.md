@@ -7,8 +7,11 @@ Serverless Framework を使った AWS Lambda に関数を作成するサンプ�
 以下の言語を想定しています。
 
 - aws-python3
+- aws-go-mod
 
 ## aws-python3
+
+- Python 3
 
 Create function with python3 template.
 
@@ -70,4 +73,15 @@ Execute your function.
 
 ```powershell
 PS> serverless invoke --function hello
+```
+
+## aws-go-mod
+
+- Go ver 1.13
+- GNU Make
+
+Create function with go mod template.
+
+```powershell
+serverless create --template aws-go-mod --path aws-go-mod --name serverless-go
 ```
