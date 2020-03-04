@@ -1,10 +1,10 @@
 # Serverless Framework ではじめる Serverless ハンズオン
 
-- _2020-03-12 Takatoshi KURIYAMA_
+- _2020-03-19 Takatoshi KURIYAMA_
 
-Serverless Framework を使った AWS Lambda に関数を作成するサンプルです。
+Serverless Framework を使って AWS Lambda に関数を作成するサンプルです。
 
-以下の言語を想定しています。
+以下のケースを想定しています。
 
 - aws-python3
 - aws-go-mod
@@ -21,7 +21,7 @@ PS> serverless create --template aws-python3 --path aws-python3 --name serverles
 
 Change `serverless.yml`.
 
-- to deploy to Tokyo region.
+- set Tokyo region.
 - set instance size.
 - set timeout.
 - output logs.
@@ -45,7 +45,13 @@ Check your deploy configuration with dry-run mode. add `--noDeploy` option.
 PS> serverless deploy --verbose --noDeploy
 ```
 
-The dry-run mode before first deployment has a bug with 'logs: rest Api' option. reproduce in version 1.60.1.
+Add `--aws-profile [PROFILE NAME]` to specify profile.
+
+```powershell
+PS> serverless deploy --verbose --noDeploy --aws-profile my_playground
+```
+
+The dry-run mode before first deployment has a bug(?) with 'logs: rest Api' option. reproduce in version 1.60.1.
 
 ```powershell
 serverless deploy --verbose --noDeploy
@@ -78,10 +84,33 @@ PS> serverless invoke --function hello
 ## aws-go-mod
 
 - Go ver 1.13
-- GNU Make
+- (optional) GNU Make
 
 Create function with go mod template.
 
 ```powershell
 serverless create --template aws-go-mod --path aws-go-mod --name serverless-go
 ```
+
+Change `serverless.yml`.
+
+- set Tokyo region.
+- set instance size.
+- set timeout.
+- output logs.
+- define http path and method.
+
+Run `build.bat` to build modules for Windows users.
+
+```bat
+build.bat
+```
+
+Also you can use `make` for Max/Linux users.
+
+```bat
+make build
+```
+
+Check your deploy configuration with dry-run mode.
+Deploy & invoke function.
