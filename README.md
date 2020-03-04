@@ -8,12 +8,13 @@ Serverless Framework を使って AWS Lambda に関数を作成するサンプ�
 
 - aws-python3
 - aws-go-mod
+- aws-nodejs-typescript
 
 ## aws-python3
 
 - Python 3
 
-Create function with python3 template.
+Create service with python3 template.
 
 ```powershell
 PS> serverless create --template aws-python3 --path aws-python3 --name serverless-python
@@ -86,7 +87,7 @@ PS> serverless invoke --function hello
 - Go ver 1.13
 - (optional) GNU Make
 
-Create function with go mod template.
+Create service with Go with modules template.
 
 ```powershell
 serverless create --template aws-go-mod --path aws-go-mod --name serverless-go
@@ -111,6 +112,27 @@ Also you can use `make` for Max/Linux users.
 ```bat
 make build
 ```
+
+Check your deploy configuration with dry-run mode.
+Deploy & invoke function.
+
+## aws-nodejs-typescript
+
+Create service with TypeScript template.
+
+```powershell
+serverless create --template aws-nodejs-typescript --path aws-typescript --name serverless-ts
+```
+
+Install node.js modules.
+
+Change `serverless.yml`.
+
+- set Tokyo region.
+- set instance size.
+- set timeout.
+- output logs.
+- define http path and method.
 
 Check your deploy configuration with dry-run mode.
 Deploy & invoke function.
