@@ -20,13 +20,14 @@ Create service with python3 template.
 PS> serverless create --template aws-python3 --path aws-python3 --name serverless-python
 ```
 
-Change `serverless.yml`.
+Change `serverless.yml`. reference -> [Serverless Framework - AWS Lambda Guide - Services](https://serverless.com/framework/docs/providers/aws/guide/services/)
 
 - set Tokyo region.
-- set instance size.
+- set memory size.
 - set timeout.
 - output logs.
 - define http path and method.
+- (optional) add `AWSLambdaBasicExecutionRole` role.
 
 `serverless` commands tell us if we have yaml error like below.
 
